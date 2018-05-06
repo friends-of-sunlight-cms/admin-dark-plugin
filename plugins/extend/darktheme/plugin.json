@@ -1,0 +1,14 @@
+{
+    "name": "DarkTheme",
+    "description": "Dark administration theme",
+    "version": "1.0",
+    "api": "^8.0",
+    "url": "http://jdanek.eu/",
+    "class": "DarkThemePlugin",
+    "events.admin": [
+        ["admin.head", "$this::onAdminHead"],
+        ["admin.style.start", "$this::changes"],
+        ["admin.style", "$this::addStyles"]
+    ],
+  "scripts":["init.php"]
+}

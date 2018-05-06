@@ -6,9 +6,9 @@ use Sunlight\Plugin\ExtendPlugin;
 use Sunlight\Plugin\PluginManager;
 
 /**
- * Devkit plugin
+ * Dark theme plugin
  *
- * @author ShiraNai7 <shira.cz>
+ * @author Jirka Daněk <jdanek.eu>
  */
 class DarkThemePlugin extends ExtendPlugin
 {

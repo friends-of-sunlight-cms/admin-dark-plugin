@@ -6,7 +6,7 @@ use Sunlight\Plugin\ExtendPlugin;
 use Sunlight\Plugin\PluginManager;
 
 /**
- * Dark theme plugin
+ * Admin DarkTheme
  *
  * @author Jirka Daněk <jdanek.eu>
  */
@@ -44,18 +44,17 @@ class DarkThemePlugin extends ExtendPlugin
     public function changes(array $args)
     {
         $scheme = array(
-            'dark'                          => true,
-            'scheme_text'                   => $this->text_color,
-            'scheme_link'                   => $this->link_color,
-            'scheme_smoke_text'             => $this->hint_color,
-            'scheme_smoke'                  => $this->border_color,
-            'scheme_smoke_med'              => $this->border_color,
-            'scheme_bar'                    => $this->dark_color,
+            'dark' => true,
+            'scheme_text' => $this->text_color,
+            'scheme_link' => $this->link_color,
+            'scheme_smoke_text' => $this->hint_color,
+            'scheme_smoke' => $this->border_color,
+            'scheme_smoke_med' => $this->border_color,
+            'scheme_bar' => $this->dark_color,
             'scheme_smoke_lightest_colored' => $this->hover_color,
         );
 
-        foreach ($scheme as $n => $c)
-        {
+        foreach ($scheme as $n => $c) {
             $GLOBALS[$n] = $c;
         }
     }
@@ -125,7 +124,7 @@ class DarkThemePlugin extends ExtendPlugin
         $args['output'] .= "#fman-list td {border: none;}\n";
         $args['output'] .= "#settingseditform table td {border-bottom: 1px solid {$this->border_color};}\n";
         $args['output'] .= ".well {background-color: transparent;}\n";
-		
-		$args['output'] .= "pre.exception {background-color: transparent; border: 1px solid {$this->border_color}; background-color: {$this->dark_color};}\n";
+
+        $args['output'] .= "pre.exception {background-color: transparent; border: 1px solid {$this->border_color}; background-color: {$this->dark_color};}\n";
     }
 }

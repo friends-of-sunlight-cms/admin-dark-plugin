@@ -100,6 +100,7 @@ class DarkThemePlugin extends ExtendPlugin
         $args['output'] .= "#settingsnav a:hover, #settingsnav li.active a {color: {$this->menu_tab_text_act}; background-color: {$this->dark_color};}\n";
         $args['output'] .= "#fman-list tr:hover td, table.page-list tr:hover:not(.page-separator) td {background-color: {$this->hover_color};}\n";
         $args['output'] .= "table.page-list td {border-left: 1px solid {$this->border_color};}\n";
+        $args['output'] .= "table.page-list tr.page-separator td {border-top: 24px solid {$this->background}; background-color:{$this->dark_color}; border-left: 1px solid {$this->border_color};}\n";
         $args['output'] .= "td.page-actions a {background: {$this->control_bg}; outline: 1px solid {$this->border_color};}";
         $args['output'] .= "td.page-actions a:hover {background: {$this->control_bg_hover}; outline: 1px solid {$this->hover_border_color};}";
         $args['output'] .= "table.page-list tr:hover td.page-actions a {outline: 1px solid {$this->hover_border_color};}";

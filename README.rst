@@ -1,5 +1,5 @@
-Admin Dark Theme
-################
+Admin Dark Theme Plugin
+#######################
 
 Custom dark theme for Sunlight CMS 8 administration
 

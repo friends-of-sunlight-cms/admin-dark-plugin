@@ -7,9 +7,9 @@
     "url": "https://jdanek.eu/",
     "class": "DarkThemePlugin",
     "events.admin": [
-        ["admin.head", "$this::onAdminHead"],
-        ["admin.style.start", "$this::changes"],
-        ["admin.style", "$this::addStyles"]
+        {"event": "admin.head", "method": "onAdminHead"},
+        {"event": "admin.style.start", "method": "changes"},
+        {"event": "admin.style", "method": "addStyles"}
     ],
   "scripts":["init.php"]
 }

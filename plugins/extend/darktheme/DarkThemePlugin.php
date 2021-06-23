@@ -1,6 +1,6 @@
 <?php
 
-namespace SunlightExtend\DarkTheme;
+namespace SunlightExtend\Darktheme;
 
 use Sunlight\Plugin\ExtendPlugin;
 use Sunlight\Plugin\PluginManager;
@@ -24,7 +24,7 @@ class DarkThemePlugin extends ExtendPlugin
     private $control_bg_hover = 'linear-gradient(#303030, #282828)';
     private $menu_tab_text_act = '#e2e2e2';
 
-    public function __construct(array $data, PluginManager $manager)
+    public function __construct($data, PluginManager $manager)
     {
         parent::__construct($data, $manager);
     }
@@ -32,7 +32,7 @@ class DarkThemePlugin extends ExtendPlugin
     /**
      * @param array $args
      */
-    public function onAdminHead(array $args)
+    public function onAdminHead(array $args): void
     {
         // vynuceni tmaveho designu pro code mirror
         $args['css']['codemirror_theme'] = $basePath = $this->getWebPath() . '/../codemirror/Resources/theme/ambiance.css';
@@ -41,9 +41,9 @@ class DarkThemePlugin extends ExtendPlugin
     /**
      * @param array $args
      */
-    public function changes(array $args)
+    public function changes(array $args): void
     {
-        $scheme = array(
+        $scheme = [
             'dark' => true,
             'scheme_text' => $this->text_color,
             'scheme_link' => $this->link_color,
@@ -52,14 +52,14 @@ class DarkThemePlugin extends ExtendPlugin
             'scheme_smoke_med' => $this->border_color,
             'scheme_bar' => $this->dark_color,
             'scheme_smoke_lightest_colored' => $this->hover_color,
-        );
+        ];
 
         foreach ($scheme as $n => $c) {
             $GLOBALS[$n] = $c;
         }
     }
 
-    public function addStyles($args)
+    public function addStyles($args): void
     {
         $args['output'] .= "\n/* DarkTheme Plugin */\n";
 

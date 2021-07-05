@@ -35,7 +35,7 @@ class DarkThemePlugin extends ExtendPlugin
     public function onAdminHead(array $args): void
     {
         // vynuceni tmaveho designu pro code mirror
-        $args['css']['codemirror_theme'] = $basePath = $this->getWebPath() . '/../codemirror/Resources/theme/ambiance.css';
+        $args['css']['codemirror_theme'] = $this->getWebPath() . '/../codemirror/Resources/theme/ambiance.css';
     }
 
     /**

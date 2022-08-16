@@ -3,7 +3,9 @@
     "name": "DarkTheme",
     "description": "Dark administration theme",
     "version": "1.0",
-    "api": "^8.0",
+    "environment": {
+        "system": "^8.0"
+    },
     "url": "https://jdanek.eu/",
     "class": "DarkThemePlugin",
     "events.admin": [

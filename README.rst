@@ -17,6 +17,14 @@ Requirements
 Installation
 ************
 
-#. Copy the folder ``plugin`` and its contents to the root directory or through system administration ``Administration > Plugins > Upload new plugins``
+::
 
-#. In the system settings, increase the cache number to force reloading of all system styles and scripts for all users
+    Copy the folder 'plugins' and its contents to the root directory
+
+or
+
+::
+
+    Installation via administration: 'Administration > Plugins > Upload new plugins'
+
+In the system settings, increase the cache number to force reloading of all system styles and scripts for all users

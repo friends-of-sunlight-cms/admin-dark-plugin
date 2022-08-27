@@ -35,7 +35,7 @@ class DarkThemePlugin extends ExtendPlugin
     public function onAdminHead(array $args): void
     {
         // vynuceni tmaveho designu pro code mirror
-        $args['css']['codemirror_theme'] = $this->getWebPath() . '/../codemirror/Resources/theme/ambiance.css';
+        $args['css']['codemirror_theme'] = $this->getWebPath() . '/../codemirror/resources/theme/ambiance.css';
     }
 
     /**
@@ -67,8 +67,8 @@ class DarkThemePlugin extends ExtendPlugin
         $args['output'] .= "div.CodeMirror {border: 1px solid {$this->border_color};}\n";
 
         // nahrazeni obrazku
-        $args['output'] .= ".sortable-handle {background: url({$this->getWebPath()}/Resources/drag-handle.png) left top no-repeat;}\n";
-        $args['output'] .= "body.login-layout #top {background: url({$this->getWebPath()}/Resources/logo.png) center 50px no-repeat;}\n";
+        $args['output'] .= ".sortable-handle {background: url({$this->getWebPath()}/resources/drag-handle.png) left top no-repeat;}\n";
+        $args['output'] .= "body.login-layout #top {background: url({$this->getWebPath()}/resources/logo.png) center 50px no-repeat;}\n";
 
         // odkazy
         $args['output'] .= "table.page-list a, #footer a, a {color: {$this->link_color};}\n";

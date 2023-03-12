@@ -5,11 +5,6 @@ namespace SunlightExtend\Darktheme;
 use Sunlight\Plugin\ExtendPlugin;
 use Sunlight\Plugin\PluginManager;
 
-/**
- * Admin DarkTheme
- *
- * @author Jirka Daněk <jdanek.eu>
- */
 class DarkThemePlugin extends ExtendPlugin
 {
     private $background = '#222222';
@@ -24,18 +19,12 @@ class DarkThemePlugin extends ExtendPlugin
     private $control_bg_hover = 'linear-gradient(#303030, #282828)';
     private $menu_tab_text_act = '#e2e2e2';
 
-    /**
-     * @param array $args
-     */
     public function onAdminHead(array $args): void
     {
         // vynuceni tmaveho designu pro code mirror
         $args['css']['codemirror_theme'] = $this->getWebPath() . '/../codemirror/resources/theme/ambiance.css';
     }
 
-    /**
-     * @param array $args
-     */
     public function changes(array $args): void
     {
         $scheme = [

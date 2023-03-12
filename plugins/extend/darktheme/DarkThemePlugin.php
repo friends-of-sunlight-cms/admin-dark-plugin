@@ -24,11 +24,6 @@ class DarkThemePlugin extends ExtendPlugin
     private $control_bg_hover = 'linear-gradient(#303030, #282828)';
     private $menu_tab_text_act = '#e2e2e2';
 
-    public function __construct($data, PluginManager $manager)
-    {
-        parent::__construct($data, $manager);
-    }
-
     /**
      * @param array $args
      */

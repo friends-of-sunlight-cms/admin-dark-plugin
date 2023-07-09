@@ -1,21 +1,21 @@
 {
-  "$schema": "../../../system/schema/extend.json",
-  "name": "DarkTheme",
-  "description": "Dark administration theme",
-  "version": "0.9.2",
-  "environment": {
-    "system": "^8.0"
-  },
-  "authors": [
-    {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
-  ],
-  "class": "DarkThemePlugin",
-  "events.admin": [
-    {"event": "admin.head", "method": "onAdminHead"},
-    {"event": "admin.style.start", "method": "changes"},
-    {"event": "admin.style", "method": "addStyles"}
-  ],
-  "scripts": [
-    "init.php"
-  ]
+    "$schema": "../../../system/schema/extend.json",
+    "name": "DarkTheme",
+    "description": "Dark administration theme",
+    "version": "0.9.2",
+    "environment": {
+        "system": "^8.0"
+    },
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
+    ],
+    "class": "DarkThemePlugin",
+    "events.admin": [
+        {"event": "admin.head", "method": "onAdminHead"},
+        {"event": "admin.style.start", "method": "changes"},
+        {"event": "admin.style", "method": "addStyles"}
+    ],
+    "scripts": [
+        "init.php"
+    ]
 }

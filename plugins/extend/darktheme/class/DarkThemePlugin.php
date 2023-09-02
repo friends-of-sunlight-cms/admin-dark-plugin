@@ -3,6 +3,7 @@
 namespace SunlightExtend\Darktheme;
 
 use Sunlight\Plugin\ExtendPlugin;
+use Sunlight\Settings;
 
 class DarkThemePlugin extends ExtendPlugin
 {
@@ -18,10 +19,9 @@ class DarkThemePlugin extends ExtendPlugin
     private $control_bg_hover = 'linear-gradient(#303030, #282828)';
     private $menu_tab_text_act = '#e2e2e2';
 
-    public function onAdminHead(array $args): void
+    public function onAdminInit(array $args): void
     {
-        // vynuceni tmaveho designu pro code mirror
-        $args['css']['codemirror_theme'] = $this->getWebPath() . DIRECTORY_SEPARATOR . '../../codemirror/public/theme/ambiance.css';
+        Settings::overwrite('adminscheme_dark', 1);
     }
 
     public function changes(array $args): void
@@ -88,6 +88,7 @@ class DarkThemePlugin extends ExtendPlugin
         $args['output'] .= "td.page-actions a:hover {background: {$this->control_bg_hover}; outline: 1px solid {$this->hover_border_color};}";
         $args['output'] .= "table.page-list tr:hover td.page-actions a {outline: 1px solid {$this->hover_border_color};}";
         $args['output'] .= "fieldset table.list thead td, fieldset table.list thead th {background-color: {$this->border_color};}\n";
+        $args['output'] .= "table.log-list > tbody:hover > tr >td {background-color: {$this->hover_color};}\n";
 
         // inputy
         $args['output'] .= "input[type='submit'], input[type=submit].button {color: #e2e2e2; background: linear-gradient(#407045, #305530); border-color: #008833;}\n";

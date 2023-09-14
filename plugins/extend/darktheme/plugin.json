@@ -1,6 +1,6 @@
 {
     "$schema": "../../../system/schema/extend.json",
-    "name": "DarkTheme",
+    "name": "AdminDark Theme",
     "description": "Dark administration theme",
     "version": "1.0.0",
     "environment": {
